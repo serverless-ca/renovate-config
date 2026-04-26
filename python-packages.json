@@ -13,7 +13,7 @@
     {
       "description": "Python non-prod packages — minor/patch (grouped, no release)",
       "matchManagers": ["pip_requirements"],
-      "matchFileNames": ["**/requirements-dev*", "**/requirements_dev*", "**/requirements-docs*", "**/requirements_docs*"],
+      "matchFileNames": ["**/requirements-dev*", "**/requirements-docs*"],
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "groupName": "Dependencies (minor/patch)",
       "semanticCommitType": "chore",
@@ -34,7 +34,7 @@
     {
       "description": "Python non-prod packages — major (separate PRs, no release)",
       "matchManagers": ["pip_requirements"],
-      "matchFileNames": ["**/requirements-dev*", "**/requirements_dev*", "**/requirements-docs*", "**/requirements_docs*"],
+      "matchFileNames": ["**/requirements-dev*", "**/requirements-docs*"],
       "matchUpdateTypes": ["major"],
       "semanticCommitType": "chore",
       "schedule": ["* 0-5 * * 1"],
