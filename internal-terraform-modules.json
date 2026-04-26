@@ -1,0 +1,13 @@
+{
+  "packageRules": [
+    {
+      "description": "Internal Terraform module — auto-update, no cooldown",
+      "matchManagers": ["terraform"],
+      "matchPackageNames": ["serverless-ca/ca/aws"],
+      "automerge": true,
+      "minimumReleaseAge": "0 days",
+      "groupName": "Internal Terraform Modules",
+      "addLabels": ["internal"]
+    }
+  ]
+}
