@@ -28,6 +28,7 @@ Then add the presets that match your dependency types.
 | `default.json` | `github>serverless-ca/renovate-config` | Base settings: `config:recommended`, dashboard, labels, `platformAutomerge`, OSV vulnerability alerts |
 | `github-actions.json` | `…:github-actions` | GitHub Actions: SHA-pins external actions, skips `serverless-ca/*` internal workflows, 7-day cooldown, weekly Monday schedule, automerge all (minor/patch/major) |
 | `python-packages.json` | `…:python-packages` | Python `pip_requirements`: 7-day cooldown, weekly, automerge minor/patch, major requires review. Dev packages use `chore` commit type. |
+| `terraform-providers.json` | `…:terraform-providers` | Terraform providers: 7-day cooldown, weekly, automerge minor/patch, major requires review |
 | `internal-terraform-modules.json` | `…:internal-terraform-modules` | `serverless-ca/ca/aws` Terraform module: auto-update with no cooldown |
 
 ## Consumer examples
@@ -53,6 +54,17 @@ Then add the presets that match your dependency types.
     "github>serverless-ca/renovate-config:github-actions",
     "github>serverless-ca/renovate-config:python-packages",
     "github>serverless-ca/renovate-config:internal-terraform-modules"
+  ]
+}
+```
+
+### alb / api-gateway
+
+```json
+{
+  "extends": [
+    "github>serverless-ca/renovate-config",
+    "github>serverless-ca/renovate-config:terraform-providers"
   ]
 }
 ```
