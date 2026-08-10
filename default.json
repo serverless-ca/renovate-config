@@ -9,7 +9,8 @@
   "prHourlyLimit": 0,
   "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": {
-    "description": "Disabled — using osvVulnerabilityAlerts instead",
-    "enabled": false
+    "description": "Security fixes bypass the minimumReleaseAge hold applied to routine updates",
+    "labels": ["dependencies", "security"],
+    "minimumReleaseAge": null
   }
 }
